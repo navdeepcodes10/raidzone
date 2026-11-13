@@ -11,7 +11,7 @@
    - Accents: #10b981 (Verified), #38bdf8 (Live), #25d366 (WhatsApp)
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 :root {
   --bg-canvas: #2b2d31;
@@ -810,7 +810,7 @@ a {
 
 .btn-whatsapp-primary {
   background: var(--badge-whatsapp);
-  color: #ffffff;
+  color: var(--accent-dark);
   font-size: 1.1rem;
   font-weight: 800;
   padding: 16px 32px;
@@ -905,6 +905,14 @@ a {
 }
 
 .copyright-text {
+  font-size: 0.88rem;
+  color: var(--text-dim);
+}
+
+.footer-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
   font-size: 0.88rem;
   color: var(--text-dim);
 }
