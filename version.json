@@ -1,8 +1,8 @@
 {
-  "latest_version": "1.7.0",
-  "latest_build": 4,
+  "latest_version": "1.7.1",
+  "latest_build": 5,
   "min_version": "1.0.0",
-  "download_url": "https://navdeepcodes10.github.io/raidzone/downloads/raidzone-v1.7.0.apk",
-  "release_notes": "Version 1.7: Direct in-app updates & performance upgrades! ⚡",
+  "download_url": "https://navdeepcodes10.github.io/raidzone/downloads/raidzone-v1.7.1.apk",
+  "release_notes": "Version 1.7.1: Live dynamic versioning & performance fixes! ⚡",
   "force_update": false
 }
