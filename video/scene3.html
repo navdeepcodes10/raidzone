@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scene 3 - Features Showcase</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px;
+      height: 1920px;
+      background: #0f1012;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 110px 70px 100px;
+    }
+
+    .ambient-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1000px;
+      height: 900px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, rgba(255, 201, 60, 0.08) 40%, transparent 70%);
+      filter: blur(100px);
+      pointer-events: none;
+    }
+
+    .section-head {
+      text-align: center;
+      z-index: 10;
+    }
+    .eyebrow {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #38bdf8;
+      margin-bottom: 12px;
+    }
+    .main-title {
+      font-size: 4rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+    .main-title span {
+      color: #ffc93c;
+    }
+
+    /* 4 Big Feature Cards */
+    .cards-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+      z-index: 10;
+      margin: 30px 0;
+    }
+    .f-card {
+      background: rgba(26, 28, 32, 0.95);
+      border: 2px solid rgba(255, 255, 255, 0.12);
+      border-radius: 30px;
+      padding: 32px 38px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+    }
+    .f-icon {
+      width: 90px;
+      height: 90px;
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.8rem;
+      flex-shrink: 0;
+    }
+    .icon-gold { background: rgba(255, 201, 60, 0.18); border: 2px solid rgba(255, 201, 60, 0.4); }
+    .icon-green { background: rgba(16, 185, 129, 0.18); border: 2px solid rgba(16, 185, 129, 0.4); }
+    .icon-blue { background: rgba(56, 189, 248, 0.18); border: 2px solid rgba(56, 189, 248, 0.4); }
+    .icon-purple { background: rgba(168, 85, 247, 0.18); border: 2px solid rgba(168, 85, 247, 0.4); }
+
+    .f-info {
+      flex: 1;
+    }
+    .f-title {
+      font-size: 1.85rem;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+    .f-sub {
+      font-size: 1.25rem;
+      color: #9ba1a6;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    /* Trust Pill Footer */
+    .trust-footer {
+      background: rgba(255, 201, 60, 0.12);
+      border: 2px solid #ffc93c;
+      border-radius: 9999px;
+      padding: 20px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+    .trust-text {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #ffc93c;
+      letter-spacing: 0.04em;
+    }
+    .trust-tag {
+      background: #ffc93c;
+      color: #121316;
+      font-size: 1.05rem;
+      font-weight: 900;
+      padding: 8px 22px;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body>
+  <div class="ambient-glow"></div>
+
+  <div class="section-head">
+    <div class="eyebrow">BUILT FOR INDIAN KABADDI</div>
+    <h1 class="main-title">EVERY DETAIL. <span>ZERO GUESSWORK.</span></h1>
+  </div>
+
+  <div class="cards-stack">
+    <div class="f-card">
+      <div class="f-icon icon-gold">🏆</div>
+      <div class="f-info">
+        <div class="f-title">Circle & National Styles</div>
+        <div class="f-sub">Filter Open Circle vs Mat tournaments & weight brackets (35kg to 75kg).</div>
+      </div>
+    </div>
+
+    <div class="f-card">
+      <div class="f-icon icon-green">💰</div>
+      <div class="f-info">
+        <div class="f-title">Certified Cash Prizes</div>
+        <div class="f-sub">100% transparent awards for 1st, 2nd, Best Raider & Stopper.</div>
+      </div>
+    </div>
+
+    <div class="f-card">
+      <div class="f-icon icon-blue">📺</div>
+      <div class="f-info">
+        <div class="f-title">Live YouTube Streams</div>
+        <div class="f-sub">Watch ground matches and commentator feeds directly in real time.</div>
+      </div>
+    </div>
+
+    <div class="f-card">
+      <div class="f-icon icon-purple">📍</div>
+      <div class="f-info">
+        <div class="f-title">1-Tap Google Ground GPS</div>
+        <div class="f-sub">Turn-by-turn routing straight to the stadium or village sports ground.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="trust-footer">
+    <span class="trust-text">Official Blue Badge Verification</span>
+    <span class="trust-tag">ZERO FAKE POSTERS</span>
+  </div>
+</body>
+</html>

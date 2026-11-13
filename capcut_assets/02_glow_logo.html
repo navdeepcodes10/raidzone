@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { width:1080px; height:1080px; background:transparent; overflow:hidden; display:flex; align-items:center; justify-content:center; }
+
+.logo-container {
+  position:relative;
+  display:flex; align-items:center; justify-content:center;
+}
+
+/* Outer glow rings */
+.glow-ring {
+  position:absolute;
+  border-radius:50%;
+  border:2px solid rgba(255,69,0,0.15);
+}
+.glow-ring:nth-child(1) { width:700px; height:700px; }
+.glow-ring:nth-child(2) { width:800px; height:800px; border-color:rgba(255,69,0,0.08); }
+.glow-ring:nth-child(3) { width:900px; height:900px; border-color:rgba(255,69,0,0.04); }
+
+/* Main glow behind logo */
+.glow-bg {
+  position:absolute;
+  width:500px; height:500px;
+  background: radial-gradient(circle, rgba(255,69,0,0.4) 0%, rgba(255,140,0,0.2) 30%, rgba(255,69,0,0.05) 60%, transparent 80%);
+  border-radius:50%;
+  filter: blur(30px);
+}
+
+.logo-img {
+  width:420px; height:420px;
+  position:relative;
+  z-index:2;
+  filter: drop-shadow(0 0 30px rgba(255,69,0,0.6)) drop-shadow(0 0 60px rgba(255,140,0,0.3)) drop-shadow(0 0 100px rgba(255,69,0,0.15));
+}
+
+/* Floating embers */
+.ember {
+  position:absolute;
+  width:4px; height:4px;
+  background: #ffd700;
+  border-radius:50%;
+  filter: blur(1px);
+  box-shadow: 0 0 6px #ffa500, 0 0 12px rgba(255,69,0,0.5);
+}
+</style></head><body>
+<div class="logo-container">
+  <div class="glow-ring"></div>
+  <div class="glow-ring"></div>
+  <div class="glow-ring"></div>
+  <div class="glow-bg"></div>
+  <img src="../assets/logo.png" class="logo-img">
+  
+  <!-- Floating embers scattered around -->
+  <div class="ember" style="top:80px;left:200px;width:6px;height:6px;"></div>
+  <div class="ember" style="top:150px;right:180px;width:3px;height:3px;"></div>
+  <div class="ember" style="bottom:120px;left:250px;width:5px;height:5px;"></div>
+  <div class="ember" style="bottom:200px;right:220px;width:4px;height:4px;"></div>
+  <div class="ember" style="top:300px;left:100px;width:3px;height:3px;"></div>
+  <div class="ember" style="top:250px;right:120px;width:5px;height:5px;"></div>
+  <div class="ember" style="bottom:300px;left:150px;width:4px;height:4px;"></div>
+  <div class="ember" style="bottom:80px;right:300px;width:6px;height:6px;"></div>
+</div>
+</body></html>

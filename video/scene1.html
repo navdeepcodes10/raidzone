@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scene 1 - The Arena</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px;
+      height: 1920px;
+      background: #0f1012;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 120px 80px 140px;
+    }
+
+    /* Cinematic Stadium Lighting */
+    .spotlight-1 {
+      position: absolute;
+      top: -100px;
+      left: 10%;
+      width: 600px;
+      height: 1000px;
+      background: radial-gradient(ellipse at top, rgba(255, 201, 60, 0.22) 0%, transparent 60%);
+      transform: rotate(25deg);
+      filter: blur(80px);
+      pointer-events: none;
+    }
+    .spotlight-2 {
+      position: absolute;
+      top: -100px;
+      right: 10%;
+      width: 600px;
+      height: 1000px;
+      background: radial-gradient(ellipse at top, rgba(56, 189, 248, 0.18) 0%, transparent 60%);
+      transform: rotate(-25deg);
+      filter: blur(80px);
+      pointer-events: none;
+    }
+
+    .top-eyebrow {
+      text-align: center;
+      z-index: 10;
+    }
+    .eyebrow-text {
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: #ffc93c;
+      text-shadow: 0 0 25px rgba(255, 201, 60, 0.6);
+    }
+
+    /* Center Raider Visual */
+    .hero-frame {
+      position: relative;
+      width: 100%;
+      height: 860px;
+      border-radius: 40px;
+      overflow: hidden;
+      border: 3px solid rgba(255, 201, 60, 0.4);
+      box-shadow: 0 35px 90px rgba(0, 0, 0, 0.9), 0 0 60px rgba(255, 201, 60, 0.25);
+      z-index: 10;
+    }
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(15, 16, 18, 0.95) 0%, transparent 50%);
+    }
+    .hero-tag {
+      position: absolute;
+      bottom: 34px;
+      left: 34px;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(14px);
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
+      padding: 12px 28px;
+      border-radius: 9999px;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Dramatic Bottom Titles */
+    .bottom-titles {
+      text-align: center;
+      z-index: 10;
+    }
+    .title-line-1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      color: #9ba1a6;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .title-line-2 {
+      font-size: 4.6rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      color: #ffffff;
+      text-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+    }
+    .title-line-2 span {
+      background: linear-gradient(135deg, #ffc93c 20%, #f5b922 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body>
+  <div class="spotlight-1"></div>
+  <div class="spotlight-2"></div>
+
+  <div class="top-eyebrow">
+    <div class="eyebrow-text">A SPORT OF RAW POWER & GLORY</div>
+  </div>
+
+  <div class="hero-frame">
+    <img src="/Users/navdeep/raidzone-website/assets/kabaddi_hero.jpg" class="hero-img">
+    <div class="hero-overlay"></div>
+    <div class="hero-tag">
+      <span style="width: 12px; height: 12px; border-radius: 50%; background: #10b981; box-shadow: 0 0 14px #10b981;"></span>
+      <span>India's Most Intense Sport</span>
+    </div>
+  </div>
+
+  <div class="bottom-titles">
+    <div class="title-line-1">Across 10,000+ Villages</div>
+    <div class="title-line-2">KABADDI FINDS ITS <span>HOME.</span></div>
+  </div>
+</body>
+</html>
