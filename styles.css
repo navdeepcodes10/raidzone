@@ -1066,6 +1066,9 @@ a {
     top: 66px;
     left: 0;
     width: 100%;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     background: #1e2024;
     border-bottom: 2px solid var(--border-glass-hover);
     border-radius: 0 0 16px 16px;

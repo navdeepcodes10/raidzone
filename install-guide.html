@@ -23,6 +23,11 @@
       overflow: hidden;
     }
     .faq-question {
+      width: 100%;
+      border: none;
+      background: transparent;
+      text-align: left;
+      font-family: inherit;
       padding: 20px 24px;
       font-size: 1.1rem;
       font-weight: 800;
@@ -172,40 +177,40 @@
 
     <div class="faq-list">
       <div class="faq-item">
-        <div class="faq-question">
+        <button type="button" class="faq-question" aria-expanded="false">
           <span>Why does Android show "File might be harmful"?</span>
           <svg class="faq-chevron" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
-        </div>
+        </button>
         <div class="faq-answer">
           Android shows this standard security warning whenever an app is downloaded directly from a web browser instead of the Google Play Store (this is the same notice shown when downloading Dream11, MPL, or WhatsApp directly). Raid Zone is <strong>100% clean, verified, and free of any harmful code</strong>. Tap <em>"Download anyway"</em> to proceed safely.
         </div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-question">
+        <button type="button" class="faq-question" aria-expanded="false">
           <span>Do I need to sign in with Google or create an account?</span>
           <svg class="faq-chevron" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
-        </div>
+        </button>
         <div class="faq-answer">
           <strong>No account is needed</strong> to browse tournaments, view match posters, filter weight categories, or get ground directions. You only need an account if you are a tournament organiser publishing your own tournament.
         </div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-question">
+        <button type="button" class="faq-question" aria-expanded="false">
           <span>Which Android phones can run Raid Zone?</span>
           <svg class="faq-chevron" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
-        </div>
+        </button>
         <div class="faq-answer">
           Raid Zone runs smoothly on all Android phones running <strong>Android 7.0 (Nougat) or newer</strong> (released from 2016 onward). It has been tested and verified on Poco, Xiaomi, Redmi, Samsung, Realme, Vivo, OnePlus, and Motorola devices.
         </div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-question">
+        <button type="button" class="faq-question" aria-expanded="false">
           <span>Need help or having trouble installing?</span>
           <svg class="faq-chevron" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
-        </div>
+        </button>
         <div class="faq-answer">
           Our support team is available on WhatsApp! You can message us directly at <a href="https://wa.me/918708444708" style="color: var(--badge-whatsapp); font-weight: 700;">+91 8708444708</a> and we will assist you step by step.
         </div>
@@ -234,10 +239,11 @@
   <script src="main.js"></script>
   <script>
     // FAQ Accordion functionality
-    document.querySelectorAll('.faq-question').forEach(q => {
-      q.addEventListener('click', () => {
-        const item = q.parentElement;
-        item.classList.toggle('is-open');
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       });
     });
   </script>
